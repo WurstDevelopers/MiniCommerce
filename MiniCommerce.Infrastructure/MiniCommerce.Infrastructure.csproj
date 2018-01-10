@@ -8,9 +8,4 @@
     <PackageReference Include="SimpleInjector" Version="4.0.12" />
   </ItemGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\MiniCommerce.Data\MiniCommerce.Data.csproj" />
-    <ProjectReference Include="..\MiniCommerce.Domain\MiniCommerce.Domain.csproj" />
-  </ItemGroup>
-
 </Project>

@@ -5,11 +5,8 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="AwesomeData.cs" />
     <Compile Remove="SuperDuperAwesomeData.cs" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\MiniCommerce.Domain\MiniCommerce.Domain.csproj" />
   </ItemGroup>
 
 </Project>
