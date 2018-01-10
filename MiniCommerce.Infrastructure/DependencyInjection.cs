@@ -1,6 +1,4 @@
-﻿using MiniCommerce.Domain;
-using MiniCommerce.Domain.Interfaces;
-using SimpleInjector;
+﻿using SimpleInjector;
 
 namespace MiniCommerce.Infrastructure
 {
