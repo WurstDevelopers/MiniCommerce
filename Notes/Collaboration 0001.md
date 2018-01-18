@@ -30,15 +30,32 @@ Mal's Thoughts and Process
 ====
 - Discuss why SuperDuperAwesomeLogic is implementing the IDataContract interface
 - Look up different Register.Lifestyle options (e.g. Singleton, Scoped, etc.)
+ - Singleton:  
+ - Scoped: 
+ - Transient: 
 - Discuss purpose of Infrastructure (includes the view?)
 - Interface located in different layer as class it's implementing?
 
+- In Infrastructure, why do you need to reference both domain and comain.interfaces?
+- In Program.cs, why do we need to reference data.DoSomethingDatay since ""Logicy includes the data response?
+
 Learned
+- DI
+ - Instead of directly instantiating collaborators or using static references (aren't I still doing that?), classes will declare dependencies via their constructor (aka constructor injection - eg SuperDuperAwesomeLogic?)
+  - Constructor Injection - requires classes to be public (reason for issue with IDataContract?)
+ - Classes request abstractions provided to them when the class is constructed
+ Helpful to have a class dedicated to creating classes with their associated dependencies (e.g. DependencyInjection.cs), referred to as containers (eg public Container ApplicationContainer (ln 10); ASP.NET built-in container is IServiceProvider)
+  - Basically a factory responsible for providing instances of requested types
+  - Will create dependencies as part of requested instance
 - Onion architecture not ideal for small apps but good for large business applications with long life-spans
 - Outer layer of onion architecture reserved for things that change often
 
 Issues
 - Didn't implement IDataContract as public class (defaulted to internal which caused issues when trying to inject dependency)
+
+**Reading Material**
+https://www.martinfowler.com/articles/injection.html
+https://msdn.microsoft.com/library/hh323705.aspx
 
 Feedback for Thomas
 ---
