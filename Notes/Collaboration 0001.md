@@ -28,8 +28,14 @@ Steps
 
 Mal's Thoughts and Process
 ====
+- Discuss why SuperDuperAwesomeLogic is implementing the IDataContract interface
+- Look up different Register.Lifestyle options (e.g. Singleton, Scoped, etc.)
+- Discuss purpose of Infrastructure (includes the view?)
+- Interface located in different layer as class it's implementing?
 
-
+Learned
+- Onion architecture not ideal for small apps but good for large business applications with long life-spans
+- Outer layer of onion architecture reserved for things that change often
 
 Feedback for Thomas
 ---
