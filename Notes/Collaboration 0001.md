@@ -37,5 +37,8 @@ Learned
 - Onion architecture not ideal for small apps but good for large business applications with long life-spans
 - Outer layer of onion architecture reserved for things that change often
 
+Issues
+- Didn't implement IDataContract as public class (defaulted to internal which caused issues when trying to inject dependency)
+
 Feedback for Thomas
 ---
