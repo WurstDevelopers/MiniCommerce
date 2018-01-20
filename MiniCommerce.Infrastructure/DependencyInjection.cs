@@ -10,9 +10,6 @@ namespace MiniCommerce.Infrastructure
         {
             ApplicationContainer = new Container();
 
-            ApplicationContainer.Register<IDomainLayer, SuperDuperAwesomeLogic>(Lifestyle.Singleton);
-            //ToDo: Create Registry for between IDataContract and your new implementation of IDataContract that is in the data project. 
-
             ApplicationContainer.Verify();
         }
     }
