@@ -29,12 +29,18 @@ Steps
 Mal's Thoughts and Process
 ====
 - Discuss why SuperDuperAwesomeLogic is implementing the IDataContract interface
+  - Don't want presentation layer to directly reference the data layer, it could cause unintended issues
 - Look up different Register.Lifestyle options (e.g. Singleton, Scoped, etc.)
   - Singleton: Cached indefinitely
   - Scoped: Cached according to container's lifetime
   - Transient: Not cached
-- Discuss purpose of Infrastructure (includes the view?)
+- Discuss purpose of Infrastructure
+  - Similar to cross cutting concerns (goes across layers)
+  - Presentation -> Infrastructure -> Data
+    - Way to reference the data layer without coupling it, see whiteboard diagram
 - Interface located in different layer as class it's implementing?
+  - DataContract is within the Data layer, which referenced Domain
+  - In the domain, we just need the interface
 
 - In Infrastructure, why do you need to reference both domain and comain.interfaces?
 - In Program.cs, why do we need to reference data.DoSomethingDatay since ""Logicy includes the data response?
