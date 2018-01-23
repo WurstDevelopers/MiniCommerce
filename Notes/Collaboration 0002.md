@@ -7,9 +7,9 @@ Have a solution that builds on Mal's computer so we can start programming this t
 
 Limitations
 ---
-- The solution should have the same structure as the first MiniCommerce solution. 
+- ~~The solution should have the same structure as the first MiniCommerce solution.~~ 
     - Maybe we could rename the projects to MiniCommerce.ProductManager.* if we want this to be a seperate application. I am not passionate about this idea.
-- It should have the dependency injection framework installed in the right projects. 
+- ~~It should have the dependency injection framework installed in the right projects. ~~
 - The solution should have at least two unit testing projects. 
     - One for unit testing the domain. 
     - One that is an integration testing project. 
@@ -20,3 +20,7 @@ Limitations
     - Maybe your git client is ignoring the .gitignore file. I use GitHub's client and it only checks in the right files.
 - It should be checked into the main branch of source control.
 
+##Mal's Notes
+===
+- Simple Injector nuget package is only referenced in UI and Infrastructure layers
+- When programming do you creat the interface or the class first?
