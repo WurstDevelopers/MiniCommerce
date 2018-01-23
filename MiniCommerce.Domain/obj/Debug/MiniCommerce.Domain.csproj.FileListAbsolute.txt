@@ -1,0 +1,6 @@
+C:\Users\mensor\Desktop\MiniCommerce\MiniCommerce.Domain\bin\Debug\MiniCommerce.Domain.dll.config
+C:\Users\mensor\Desktop\MiniCommerce\MiniCommerce.Domain\bin\Debug\MiniCommerce.Domain.dll
+C:\Users\mensor\Desktop\MiniCommerce\MiniCommerce.Domain\bin\Debug\MiniCommerce.Domain.pdb
+C:\Users\mensor\Desktop\MiniCommerce\MiniCommerce.Domain\obj\Debug\MiniCommerce.Domain.csproj.CoreCompileInputs.cache
+C:\Users\mensor\Desktop\MiniCommerce\MiniCommerce.Domain\obj\Debug\MiniCommerce.Domain.dll
+C:\Users\mensor\Desktop\MiniCommerce\MiniCommerce.Domain\obj\Debug\MiniCommerce.Domain.pdb

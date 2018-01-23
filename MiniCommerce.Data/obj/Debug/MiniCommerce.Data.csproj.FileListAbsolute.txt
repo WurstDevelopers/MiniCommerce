@@ -1,0 +1,10 @@
+C:\Users\mensor\Desktop\MiniCommerce\MiniCommerce.Data\bin\Debug\MiniCommerce.Data.dll.config
+C:\Users\mensor\Desktop\MiniCommerce\MiniCommerce.Data\bin\Debug\MiniCommerce.Data.dll
+C:\Users\mensor\Desktop\MiniCommerce\MiniCommerce.Data\bin\Debug\MiniCommerce.Data.pdb
+C:\Users\mensor\Desktop\MiniCommerce\MiniCommerce.Data\bin\Debug\MiniCommerce.Domain.dll
+C:\Users\mensor\Desktop\MiniCommerce\MiniCommerce.Data\bin\Debug\MiniCommerce.Domain.pdb
+C:\Users\mensor\Desktop\MiniCommerce\MiniCommerce.Data\bin\Debug\MiniCommerce.Domain.dll.config
+C:\Users\mensor\Desktop\MiniCommerce\MiniCommerce.Data\obj\Debug\MiniCommerce.Data.csprojResolveAssemblyReference.cache
+C:\Users\mensor\Desktop\MiniCommerce\MiniCommerce.Data\obj\Debug\MiniCommerce.Data.csproj.CoreCompileInputs.cache
+C:\Users\mensor\Desktop\MiniCommerce\MiniCommerce.Data\obj\Debug\MiniCommerce.Data.dll
+C:\Users\mensor\Desktop\MiniCommerce\MiniCommerce.Data\obj\Debug\MiniCommerce.Data.pdb
