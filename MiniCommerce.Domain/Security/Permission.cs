@@ -5,5 +5,6 @@
         Read,
         Write, 
         Delete, 
+        Modify // I don't know if this one is nessisary. 
     }
 }
