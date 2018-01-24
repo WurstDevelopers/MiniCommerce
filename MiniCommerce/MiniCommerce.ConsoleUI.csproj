@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{B09FB148-33F4-40C1-9C68-820E75EE4A82}</ProjectGuid>
-    <OutputType>Library</OutputType>
-    <RootNamespace>MiniCommerce.Infrastructure</RootNamespace>
-    <AssemblyName>MiniCommerce.Infrastructure</AssemblyName>
+    <ProjectGuid>{1852E8F9-FA4B-4E48-8351-BFAEED88B689}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>MiniCommerce</RootNamespace>
+    <AssemblyName>MiniCommerce</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -31,9 +31,6 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
-  <PropertyGroup>
-    <StartupObject />
-  </PropertyGroup>
   <ItemGroup>
     <Reference Include="SimpleInjector, Version=4.0.12.0, Culture=neutral, PublicKeyToken=984cb50dea722e99, processorArchitecture=MSIL">
       <HintPath>..\packages\SimpleInjector.4.0.12\lib\net45\SimpleInjector.dll</HintPath>
@@ -48,7 +45,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DependencyInjection.cs" />
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -56,13 +53,13 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\MiniCommerce.Data\MiniCommerce.Data.csproj">
-      <Project>{b4f2b4eb-a992-4b4f-9ae1-220cec68cffa}</Project>
-      <Name>MiniCommerce.Data</Name>
-    </ProjectReference>
     <ProjectReference Include="..\MiniCommerce.Domain\MiniCommerce.Domain.csproj">
       <Project>{b4dcbef9-eb61-433b-a99d-7402cbbeca5b}</Project>
       <Name>MiniCommerce.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MiniCommerce.Infrastructure\MiniCommerce.Infrastructure.csproj">
+      <Project>{B09FB148-33F4-40C1-9C68-820E75EE4A82}</Project>
+      <Name>MiniCommerce.Infrastructure</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
