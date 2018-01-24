@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.27130.2024
+VisualStudioVersion = 15.0.27130.2020
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiniCommerce.ConsoleUI", "MiniCommerce\MiniCommerce.ConsoleUI.csproj", "{1852E8F9-FA4B-4E48-8351-BFAEED88B689}"
 EndProject
@@ -10,6 +10,10 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiniCommerce.Domain", "MiniCommerce.Domain\MiniCommerce.Domain.csproj", "{B4DCBEF9-EB61-433B-A99D-7402CBBECA5B}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiniCommerce.Infrastructure", "MiniCommerce.Infrastructure\MiniCommerce.Infrastructure.csproj", "{B09FB148-33F4-40C1-9C68-820E75EE4A82}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MiniCommerce.Domain.Tests", "MiniCommerce.Domain.Tests\MiniCommerce.Domain.Tests.csproj", "{5A1D2666-B176-46E1-A509-AD8BEA460947}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MiniCommerce.IntegrationTests", "MiniCommerce.IntegrationTests\MiniCommerce.IntegrationTests.csproj", "{5A8F143C-CB5D-4D2A-A0E6-BCB647927688}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +37,14 @@ Global
 		{B09FB148-33F4-40C1-9C68-820E75EE4A82}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B09FB148-33F4-40C1-9C68-820E75EE4A82}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B09FB148-33F4-40C1-9C68-820E75EE4A82}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5A1D2666-B176-46E1-A509-AD8BEA460947}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5A1D2666-B176-46E1-A509-AD8BEA460947}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5A1D2666-B176-46E1-A509-AD8BEA460947}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5A1D2666-B176-46E1-A509-AD8BEA460947}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5A8F143C-CB5D-4D2A-A0E6-BCB647927688}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5A8F143C-CB5D-4D2A-A0E6-BCB647927688}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5A8F143C-CB5D-4D2A-A0E6-BCB647927688}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5A8F143C-CB5D-4D2A-A0E6-BCB647927688}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
