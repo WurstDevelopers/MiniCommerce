@@ -49,5 +49,11 @@ My thinking about programming.
     - Checking in only .csproj, .cs, and .md files. 
 - Hopefully I'll get to programming soon. 
 
+Thomas's 1/25 notes
+===
+I'm just going to start working on unit testing the authentication module. The step by step notes for it will be in the infrastructure folder. I'm also going to write up a new collaboration file for you giving instructions and guidance for starting the product manager thingy.
+
+Collaboration 0003 has instructions for creating a new class and whatnot.
+
 
 

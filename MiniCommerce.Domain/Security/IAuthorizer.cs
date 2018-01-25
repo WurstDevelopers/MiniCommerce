@@ -2,6 +2,6 @@
 {
     public interface IAuthorizer
     {
-        bool IsAuthorized(Permission permissionRequired);
+        bool HasAuthorization(Permission permissionRequired);
     }
 }
