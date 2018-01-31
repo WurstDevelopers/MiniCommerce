@@ -16,5 +16,15 @@ namespace MiniCommerce.Domain
         {
             authorizer.HasAuthorization(Permission.Delete);
         }
+
+        public void Update(Product product)
+        {
+            authorizer.HasAuthorization(Permission.Write);
+        }
+
+        public void Read(Product product)
+        {
+            authorizer.HasAuthorization(Permission.Read);
+        }
     }
 }
