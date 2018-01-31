@@ -23,5 +23,10 @@ Steps
 ---
 See UserManagement.ThomasTrainOfThought.md and feel free to ask me questions. 
 
-Mal's thoughs and process
+Interesting Observation - Hint
+---
+It is going to be difficult to test the read permission. Enums default to the first option of the enum. So, if make sure that `Permission.Read` is passed in you need to overwrite the default to something else in order to get a failing test. 
+
+Mal's thoughts and process
 ===
+1/31 - Troubleshoot why unit tests aren't running on my machine; write two tests for update and read (keep one failing)
