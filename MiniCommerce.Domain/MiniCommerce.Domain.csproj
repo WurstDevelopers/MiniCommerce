@@ -47,6 +47,8 @@
   <ItemGroup>
     <Compile Include="Interfaces\IDataContract.cs" />
     <Compile Include="Interfaces\IDomainLayer.cs" />
+    <Compile Include="Product.cs" />
+    <Compile Include="ProductManagement.cs" />
     <Compile Include="Security\IAuthorizer.cs" />
     <Compile Include="Security\Permission.cs" />
     <Compile Include="SuperDuperAwesomeLogic.cs" />
