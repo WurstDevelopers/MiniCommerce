@@ -2,13 +2,13 @@
 {
     public interface IHasher
     {
-        Hash CreatePasswordHash(string password);
+        PasswordHash CreatePasswordHash(string password);
     }
 
-    public class Hash
+    public class PasswordHash
     {
         public string Salt { get; set; }
-        public string PasswordHash { get; set; }
+        public string Hash { get; set; }
         public uint Iterations { get; set; }
     }
 }
