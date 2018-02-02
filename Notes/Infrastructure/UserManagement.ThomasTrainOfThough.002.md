@@ -294,3 +294,98 @@ namespace MiniCommerce.Infrastructure.Tests
 
 
 ```
+
+**The Test Named ``UserManagementTestsCreateUserShouldPassPasswordHashFromIHasherToTheDataRepoOnTheUserObject()``**
+
+Ok, so now we need to test that the ``PasswordHash`` object returned from the IHasher is added to the ``User`` object and passed to the data layer. 
+
+How do we do this? It is tricky since the Hash is coming from another class and we are wanting to pass that to yet another class. So, it is all about our mocks again. We need to arrange that our Mock hasher returns an object, which we can do because we have control over it. 
+
+1. We need to devise some way to return an object that we provide our mock object. And we are going to do that with a property on the ``MockHasher`` called ``CreatePasswordHashReturnObject``. We are then simply going to return that object. 
+
+**New and improved MockHasher**
+``` csharp
+    public class MockHasher : IHasher
+    {
+        public string CreatePasswordHashInput { get; private set; }
+        public PasswordHash CreatePasswordHashReturnObject { private get; set; }
+
+        public PasswordHash CreatePasswordHash(string password)
+        {
+            CreatePasswordHashInput = password;
+            return CreatePasswordHashReturnObject;
+        }
+    }
+
+```
+2. Now we need to use that property and assign it an object in our test that we want it to return. We then want to assert that that object is part of the ``User`` object we pass to the ``IUserRepository``.
+
+**Test so far**
+``` csharp
+        [TestMethod]
+        public void UserManagementTestsCreateUserShouldPassPasswordHashFromIHasherToTheDataRepoOnTheUserObject()
+        {
+            var username = RandomValue.String();
+            var password = RandomValue.String();
+
+            var hashToReturn = RandomValue.Object<PasswordHash>();
+
+            hasher.CreatePasswordHashReturnObject = hashToReturn;
+
+            userManager.CreateUser(username, password);
+
+            //the BeSameAs assert means that it is the EXACT same object as hashToReturn.
+            userRepository.UserToAddInput.PasswordHash.Should().BeSameAs(hashToReturn);
+            userRepository.UserToAddInput.PasswordHash.Hash.Should().Be(hashToReturn.Hash);
+        }
+```
+3. Great! We have a failing test. So, I just need to pass it by assigning the password hash from the ``IHasher`` to the ``User``. Easy!
+4. Done and passing!
+
+**Production code**
+``` csharp
+using MiniCommerce.Infrastructure.Interfaces;
+
+namespace MiniCommerce.Infrastructure
+{
+    public class UserManagement
+    {
+        private readonly IHasher hasher;
+        private readonly IUserRepository userRepository;
+
+        public UserManagement(IHasher hasher, IUserRepository userRepository)
+        {
+            this.hasher = hasher;
+            this.userRepository = userRepository;
+        }
+
+        public void CreateUser(string userName, string password)
+        {
+            //Arggg. We need to make sure that the username is unique to the system. That will be my next round of tests.
+
+            var passwordHash = hasher.CreatePasswordHash(password);
+
+            var user = new User(userName, passwordHash);
+
+            userRepository.AddUser(user);
+        }
+    }
+}
+
+namespace MiniCommerce.Infrastructure.Interfaces
+{
+    public class User
+    {
+        public User(string userName, PasswordHash passwordHash)
+        {
+            UserName = userName;
+            PasswordHash = passwordHash;
+        }
+
+        public string UserName { get; private set; }
+        public PasswordHash PasswordHash { get; private set; }
+    }
+}
+```
+
+

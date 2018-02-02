@@ -17,9 +17,9 @@ namespace MiniCommerce.Infrastructure
         {
             //Arggg. We need to make sure that the username is unique to the system. That will be my next round of tests.
 
-            hasher.CreatePasswordHash(password);
+            var passwordHash = hasher.CreatePasswordHash(password);
 
-            var user = new User(userName);
+            var user = new User(userName, passwordHash);
 
             userRepository.AddUser(user);
         }
