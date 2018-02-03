@@ -14,7 +14,7 @@ namespace MiniCommerce.Domain
 
         public void Delete(Product product)
         {
-            authorizer.HasAuthorization(Permission.Delete);
+            authorizer.HasAuthorization(Permission.ProductDelete);
         }
     }
 }

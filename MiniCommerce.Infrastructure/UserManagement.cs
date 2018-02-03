@@ -5,9 +5,9 @@ namespace MiniCommerce.Infrastructure
     public class UserManagement
     {
         private readonly IHasher hasher;
-        private readonly IUserRepository userRepository;
+        private readonly IUserRepsository userRepository;
 
-        public UserManagement(IHasher hasher, IUserRepository userRepository)
+        public UserManagement(IHasher hasher, IUserRepsository userRepository)
         {
             this.hasher = hasher;
             this.userRepository = userRepository;
@@ -22,6 +22,8 @@ namespace MiniCommerce.Infrastructure
             var user = new User(userName, passwordHash);
 
             userRepository.AddUser(user);
+
+            userRepository.AccountExists(userName);
         }
     }
 }

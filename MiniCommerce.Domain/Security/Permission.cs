@@ -1,9 +1,12 @@
 ﻿namespace MiniCommerce.Domain.Security
 {
-    public enum Permission
+    public enum Permission  
     {
-        Read,
-        Write, 
-        Delete
+        ProductRead,
+        ProductWrite, 
+        ProductDelete,
+        UserAdminRead,
+        UserAdminWrite,
+        UserAdminDelete
     }
 }
