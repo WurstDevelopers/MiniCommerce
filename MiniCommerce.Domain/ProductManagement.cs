@@ -19,12 +19,12 @@ namespace MiniCommerce.Domain
 
         public void Update(Product product)
         {
-            authorizer.HasAuthorization(Permission.Write);
+            authorizer.HasAuthorization(Permission.ProductWrite);
         }
 
         public void Read(Product product)
         {
-            authorizer.HasAuthorization(Permission.Read);
+            authorizer.HasAuthorization(Permission.ProductRead);
         }
     }
 }

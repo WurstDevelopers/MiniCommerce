@@ -31,7 +31,7 @@ namespace MiniCommerce.Domain.Tests
 
             productManager.Update(product);
 
-            authorizer.PermissionRequiredInput.Should().Be(Permission.Write);
+            authorizer.PermissionRequiredInput.Should().Be(Permission.ProductWrite);
         }
 
         [TestMethod]
@@ -45,7 +45,7 @@ namespace MiniCommerce.Domain.Tests
             var product = new Product();
 
             productManager.Read(product);
-            authorizer.PermissionRequiredInput.Should().Be(Permission.Read);
+            authorizer.PermissionRequiredInput.Should().Be(Permission.ProductRead);
         }
     }
 
