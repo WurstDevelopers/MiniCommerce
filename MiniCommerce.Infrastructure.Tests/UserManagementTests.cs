@@ -58,11 +58,34 @@ namespace MiniCommerce.Infrastructure.Tests
             userRepository.UserToAddInput.PasswordHash.Should().BeSameAs(hashToReturn);
             userRepository.UserToAddInput.PasswordHash.Hash.Should().Be(hashToReturn.Hash);
         }
+
+        [TestMethod]
+        public void UserManagementTestsCreateUserShouldCallTheAccountExistsWithCorrectParameters()
+        {
+            var username = RandomValue.String();
+            var password = RandomValue.String();
+
+            userManager.CreateUser(username, password);
+
+            userRepository.AccountExistsInput.Should().Be(username);
+        }
+
+        // create password hash should not be called
+
+        // exception should be thrown
     }
 
-    public class MockUserRepository : IUserRepository
+    public class MockUserRepository : IUserRepsository
     {
         public User UserToAddInput { get; private set; }
+        public string AccountExistsInput { get; private set; }
+        public bool AccountExistsReturnBool { private get; set; }
+
+        public bool AccountExists(string userName)
+        {
+            AccountExistsInput = userName;
+            return AccountExistsReturnBool;
+        }
 
         public void AddUser(User userToAdd)
         {

@@ -17,7 +17,7 @@ namespace MiniCommerce.Domain.Tests
 
             productManager.Delete(product);
 
-            authorizer.PermissionRequiredInput.Should().Be(Permission.Delete);
+            authorizer.PermissionRequiredInput.Should().Be(Permission.ProductDelete);
         }
 
         //try to figure out next step for delete
