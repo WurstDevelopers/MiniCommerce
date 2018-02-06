@@ -13,7 +13,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiniCommerce.DomainTests", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiniCommerce.InfrastructureTests", "MiniCommerce.Infrastructure.Test\MiniCommerce.InfrastructureTests.csproj", "{79F764E6-5C2D-4B6E-A20B-03FFE687D9EA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiniCommerce.IntegrationTest", "MiniCommerce.IntegrationTest\MiniCommerce.IntegrationTest.csproj", "{AC83E4D9-CE96-4C70-86F8-B8E5788A3746}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiniCommerce.IntegrationTests", "MiniCommerce.IntegrationTest\MiniCommerce.IntegrationTests.csproj", "{AC83E4D9-CE96-4C70-86F8-B8E5788A3746}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

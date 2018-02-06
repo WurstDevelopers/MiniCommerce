@@ -4,7 +4,6 @@ using MiniCommerce.Domain.Security;
 
 namespace MiniCommerce.Domain.Tests
 {
-
     [TestClass]
     public class ProductManagementTests
     {
