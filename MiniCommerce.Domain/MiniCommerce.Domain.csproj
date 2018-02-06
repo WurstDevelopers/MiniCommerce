@@ -51,7 +51,6 @@
     <Compile Include="ProductManagement.cs" />
     <Compile Include="Security\IAuthorizer.cs" />
     <Compile Include="Security\Permission.cs" />
-    <Compile Include="SuperDuperAwesomeLogic.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
