@@ -16,6 +16,7 @@ namespace MiniCommerce.Infrastructure
         public void CreateUser(string userName, string password)
         {
             //Arggg. We need to make sure that the username is unique to the system. That will be my next round of tests.
+            // if one user default to admin permissioins
 
             var passwordHash = hasher.CreatePasswordHash(password);
 
