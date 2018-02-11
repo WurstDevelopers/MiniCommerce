@@ -5,6 +5,13 @@ I want to make sure that the user name is unique in the system and also assign a
 
 I'm adding some permissions to the enum for user management. I'm not entirely sure that an emum is the way to go for this because it is just going to get longer and longer. Grumbles. 
 
+Explanation
+---
+
+I just wanted to elaborate a little on a design choice in this section. I chose to create a method in the data access to check whether a username had been used before in the system. Alternatively, I could have got a list of all the usernames in the system and then did the check in this module. 
+
+I chose to do the check in the data access layer because you tend to want list operations to happen close to the data. This is because that list of all users could become very large so we would have to be shuffling huge amounts of data around if we wanted to do the check in our application. Databases are optimized for dealing with sets so they tend to do these things quickly. 
+
 
 Process
 ---
