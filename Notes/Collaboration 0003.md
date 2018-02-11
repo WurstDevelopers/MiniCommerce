@@ -32,3 +32,5 @@ Mal's thoughts and process
 ~~1/31 - Troubleshoot why unit tests aren't running on my machine; write two tests for update and read (keep one failing)~~
 
 Thoughts: I fixed the test per your suggestion of setting the permission to something other than read before making the call. I also started looking into enums and I think Permissions.cs is a simple enum that [should probably have a 'None' or 'Undefined' attribute](https://docs.microsoft.com/en-us/dotnet/standard/design-guidelines/enum) as its default? This got me wondering if we want user and product permissions in the same class? I figure there would be a case were we'd give a user permissions to do some things but not with products, so we'd probably want a UserPermissionsNone and a ProductPermissionsNone and at that point we could probably just split them up into their own classes. What do you think?
+
+Sidebar: I'm imagining that for a user the permissions would be none and for the product it would be undefined?
