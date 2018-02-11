@@ -2,6 +2,7 @@
 {
     public enum Permission  
     {
+        ProductNone,
         ProductRead,
         ProductWrite, 
         ProductDelete,

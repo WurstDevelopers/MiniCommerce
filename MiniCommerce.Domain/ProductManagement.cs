@@ -24,7 +24,7 @@ namespace MiniCommerce.Domain
 
         public void Read(Product product)
         {
-            //authorizer.HasAuthorization(Permission.ProductRead);
+            authorizer.HasAuthorization(Permission.ProductRead);
         }
     }
 }
