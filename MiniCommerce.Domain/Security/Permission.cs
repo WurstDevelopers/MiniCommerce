@@ -45,11 +45,14 @@ namespace MiniCommerce.Domain.Security
         }
     }
 
+    //PROBLEM
+    // So, the values and names would have to be unique if we did it this way. How would we enforce that across permission classes?
+
     public class ProductPermission : PermissionClass
     {
-        public static ProductPermission Read { get; } = new ProductPermission(0, "Read");
-        public static ProductPermission Write { get; } = new ProductPermission(1, "Write");
-        public static ProductPermission Delete { get; } = new ProductPermission(2, "Delete");
+        public static ProductPermission Read { get; } = new ProductPermission(0, "ProductRead");
+        public static ProductPermission Write { get; } = new ProductPermission(1, "ProductWrite");
+        public static ProductPermission Delete { get; } = new ProductPermission(2, "ProductDelete");
 
         private ProductPermission(int value, string name) : base(value, name)
         {
@@ -63,9 +66,9 @@ namespace MiniCommerce.Domain.Security
 
     public class UserPermission : PermissionClass
     {
-        public static UserPermission Read { get; } = new UserPermission(0, "Read");
-        public static UserPermission Write { get; } = new UserPermission(1, "Write");
-        public static UserPermission Delete { get; } = new UserPermission(2, "Delete");
+        public static UserPermission Read { get; } = new UserPermission(10, "UserRead");
+        public static UserPermission Write { get; } = new UserPermission(11, "UserWrite");
+        public static UserPermission Delete { get; } = new UserPermission(12, "UserDelete");
 
         private UserPermission(int value, string name) : base(value, name)
         {
